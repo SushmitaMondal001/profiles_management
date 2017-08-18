@@ -23,7 +23,7 @@ angular.module('AddCtrl',[]).controller('AddController',function($scope,$http) {
   var vm = this;
 
   vm.add = function () {
-    console.log('Aug-19: add function call to add Profile with name is 344433: ' + vm.change.name);
+    console.log('Aug-19: add function call to add Profile with name is 39993: ' + vm.change.name);
 
       $http.post('/api/profiles',vm.change).then(function (response) {
 
