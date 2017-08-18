@@ -1,25 +1,25 @@
-<form name="editForm" ng-submit="submitForm(editForm.$valid)">
+<form name="editForm" ng-submit="submitForm(editForm.$valid)" ng-controller='AddController as vm'>
   <div class='form-group'>
-    <label for="title">Title</label>
+    <label for="title">Name</label>
     <input type="text" class="form-control" name="title" id="name" ng-model="vm.change.name" required>
     <p ng-show="editForm.title.$invalid" style="color:red;">Title is required.</p>
   </div>
   <div class='form-group'>
-    <label for="date">Release date</label>
+    <label for="date">Age</label>
     <input type="date" class="form-control" name="date" id="age" ng-model="vm.change.age" required>
     <p ng-show="editForm.date.$invalid" style="color:red;">Not a valid date.</p>
   </div>
   <div class='form-group'>
-    <label for="duration">Duration</label>
+    <label for="duration">Gender</label>
     <input type="number" class="form-control" name="duration" id="gender" ng-model="vm.change.gender" required>
     <p ng-show="editForm.duration.$invalid" style="color:red;">Duration is number only.</p>
   </div>
   <div class='form-group'>
-    <label for="genre">Genre</label>
+    <label for="genre">Location</label>
     <input type="text" class="form-control" id="location" ng-model="vm.change.location">
   </div>
   <div class='form-group'>
-    <label for="synopsis">Synopsis</label>
+    <label for="synopsis">Interest</label>
     <input type="text" class="form-control" id="interest" ng-model="vm.change.interest">
   </div>
 
