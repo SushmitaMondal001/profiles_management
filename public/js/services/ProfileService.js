@@ -9,7 +9,7 @@ angular.module('ProfileService', []).factory('Profile',['$http', function($http)
       return $http.post('/api/profiles',profileData);
     },
 
-    delete function(id) {
+    delete: function(id) {
       return $http.delete('/api/profiles/' + id);
     }
   }
