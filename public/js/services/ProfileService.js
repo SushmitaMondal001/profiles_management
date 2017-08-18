@@ -7,6 +7,7 @@ angular.module('ProfileService', []).factory('Profile',['$http', function($http)
 
     create: function(profileData) {
       return $http.post('/api/profiles',profileData);
+      console.log("Profile.create is called");
     },
 
     delete: function(id) {

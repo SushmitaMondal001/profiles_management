@@ -11,8 +11,13 @@ module.exports = function(app) {
   });
 
   app.post('/api/profiles', function(req,res) {
-    Profile.create(req.body);
-    console.log("post is calling");
+    //Profile.create(req.body);
+    var newProfile = new Profile(req.body);
+    newProfile.save(function (err, newProfile) {
+      console.log("post is calling");
+      if (err) return console.error(err);
+      });
+    
     res.status(200);
   })
 
