@@ -1,6 +1,6 @@
 angular.module('appRoutes', []).config('$routeProvider', '$locationProvider', function($routeProvider,$locationProvider){
   $routeProvider
-    .when('/view', {
+    .when('/', {
       templateUrl: 'views/view.html',
       controller: 'ViewController'
     })
@@ -10,6 +10,6 @@ angular.module('appRoutes', []).config('$routeProvider', '$locationProvider', fu
       controller: 'AddController'
     });
 
-  $locationProvider.html5Mode(true);  
+  $locationProvider.html5Mode(true);
 
 })
