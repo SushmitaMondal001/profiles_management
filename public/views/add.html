@@ -1,4 +1,4 @@
-<form name="editForm" ng-submit="submitForm(editForm.$valid)" ng-controller='AddController as vm'>
+<form name="editForm" ng-controller='AddController as vm'>
   <div class='form-group'>
     <label for="title">Name</label>
     <input type="text" class="form-control" name="title" id="name" ng-model="vm.change.name" required>
@@ -23,7 +23,7 @@
     <input type="text" class="form-control" id="interest" ng-model="vm.change.interest">
   </div>
 
-  <input type="submit" class="btn btn-info" value="SAVE CHANGE">
+  <input ng-click="vm.add()" class="btn btn-info" value="SAVE CHANGE">
   <input ng-click="vm.cancel()" class="btn btn-info" value="CANCEL">
 
 
