@@ -11,7 +11,9 @@ module.exports = function(app) {
   });
 
   app.post('/api/profiles', function(req,res) {
-
+    Profile.create(req.body);
+    console.log("post is calling");
+    res.status(200);
   })
 
   // app.get('*',function(req,res) {
